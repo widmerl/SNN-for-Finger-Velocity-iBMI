@@ -32,7 +32,7 @@
 split = 0.8
 
 %Load data
-z = load('/scratch/msc21h12/datasets/MonkeyN_MC.mat');
+z = load('/scratch/MonkeyN_MC.mat');
 
 
 data_len = size(z.X,1);
@@ -44,4 +44,4 @@ X_val = z.X(train_len:data_len,1:4:384);
 Y_train = [z.y(1:train_len,1),z.y(1:train_len,3) ,z.y(1:train_len,3),z.y(1:train_len,2),z.y(1:train_len,4) ,z.y(1:train_len,4)];
 Y_val = [z.y(train_len:data_len,1),z.y(train_len:data_len,3) ,z.y(train_len:data_len,3),z.y(train_len:data_len,2),z.y(train_len:data_len,4) ,z.y(train_len:data_len,4)];
 
-save("/scratch/msc21h12/dataset_processed_2021.mat",'X_train','Y_train','X_val','Y_val','-v7')
+save("/scratch/dataset_processed_2021.mat",'X_train','Y_train','X_val','Y_val','-v7')
