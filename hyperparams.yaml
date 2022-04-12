@@ -33,12 +33,12 @@
 ---
 #Training
  batch_size: 128 #how many samples per batch
- epochs: 43 #how many epochs to train for (maximum epochs)
+ epochs: 24 #how many epochs to train for (maximum epochs)
  early_stopping_patience: -1 #How many epochs to continue training with no improvement. -1 for infinite patience.
  loss: L2 # "L1", "L2" or "corr" for training using the corresponding loss function
  learning_rate: 2e-3 #learning rate
  dropout: 0.3 #dropout probability
- weight_decay: 0.005 #L2 weight decay strength
+ weight_decay: 0.01 #L2 weight decay strength
  steps: 10 #how many steps to unfold the SNN for in training
  warmup_steps: 2 #how many steps results to discard in the loss calculation
  
@@ -80,7 +80,7 @@
  #True -> Split the training dataset into 5 folds, then use 4 for training and 1 for (holdout) evaluation. Repeat 5 times such that evey fold is the evaluation set once. 
  #False -> Use the entire training dataset for training and test the network on the test set. DO NOT USE FOR HYPERPARRAMETER TUNING!
  early_stopping: False #Use early stopping or not
- dataset_file: /scratch/msc21h12/datasets/dataset_processed_2020.mat #File where the preprocessed dataset is found
+ dataset_file: /scratch/dataset_processed_2021.mat #File where the preprocessed dataset is found
 
 #save and load model
  save_model: False #If the model should be saved
